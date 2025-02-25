@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --green-light: #98DD41;
+    --green-deep: #00790C;
+    --background-grey: #F5F5F5;
+    --color-icon: #00790C;
+    --color-icon-green: #f7ffed;
+    --color-icon-green-light: #f2f9e9;
+    --border: #dfdfdf;
+    --theme-off-button: rgba(79,89,102,.122);
+    --theme-background-tag: #f3fce9;
+    --theme-background-tag-deep: #e8fcd2;
+    --them-scrollbar: #ececee;
+    --theme-background-white-dialog: white;
+    --theme-background-green: rgb(58, 144, 58);
+    --theme-background-orange: rgb(255, 195, 84);
+    --theme-background-orange-light: rgb(253, 230, 187);
+    --theme-background-orange-light-deep: rgb(255, 201, 101);
+    --theme-background-orange-deep: rgb(245, 159, 0);
+    --theme-background-dialog: rgba(0, 0, 0, 0.5);
+    --theme-background-dialog-light: rgba(0, 0, 0, 0.3);
+    --theme-background-white-dialog-light: rgb(255, 255, 255, 0.9);
+    --theme-color-red: red;
+    --them-grey-color: #d3d3d3;
+}
+
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14.09px;
+}
+
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.box--shadow-btn {
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.5),
+      7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  }
+
+.ban--select{
+    user-select: none; /* Không cho phép chọn văn bản */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none;
+}
+
+.font-header{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--theme-background-green)
+}

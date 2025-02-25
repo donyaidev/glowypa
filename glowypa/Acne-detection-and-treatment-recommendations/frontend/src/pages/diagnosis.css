@@ -1,0 +1,16 @@
+.diagnosis{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.area__left{
+    width: 80px;
+    height: 100vh;
+}
+
+.area__right{
+    width: calc(100vw - 80px);
+    height: 100vh;
+}

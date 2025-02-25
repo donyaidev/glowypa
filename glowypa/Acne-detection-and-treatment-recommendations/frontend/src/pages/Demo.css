@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+.demo__background {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main__demo{
+    width: calc(100% - 80px);
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    padding-top: 20px;
+}
+
+.main__demo--left{
+    width: 80%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0px 20px 0px 20px;
+}
+
+.main__demo--left::-webkit-scrollbar {
+    display: none;
+}
+
+
+.main__demo--head{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.main__demo--video{
+    width: 800px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.main__demo--split{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer__demo--container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    /* border-top: 1px solid rgb(210, 210, 210);
+    border-bottom: 1px solid rgb(210, 210, 210); */
+    margin-bottom: 20px;
+
+}
+
+.logo{
+    width: fit-content;
+    height: 80%;
+}
+
+.btn__use{
+    padding: 15px;
+    color: white;
+    background-color: var(--green-deep);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn__use:hover{
+    transform: scale(1.02);
+}
+
+.btn__use:active{
+    transform: scale(1);
+}
+
+.main__demo--para1{
+    font-family: "Itim", cursive;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    background-image: linear-gradient(79deg, #89CFF0, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    max-width: 100%;
+    text-align: center;
+    line-height: 1.07 !important;
+    font-size: 60px;
+}
+
+.main__demo--para2{
+    font-family: "Itim", cursive;
+    color: black;
+    font-size: 50px;
+
+}
+
+
+.main__demo--para3{
+    font-family: "Itim", cursive;
+    color: rgb(36, 36, 36);
+    font-size: 20px;
+    width: 800px;
+    text-align: center;
+}

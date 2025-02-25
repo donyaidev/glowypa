@@ -1,0 +1,11 @@
+uvicorn main:app --reload
+uvicorn main:app --reload --port 8888
+
+pip install uvicorn
+pip install fastapi
+pip install sahi
+pip install torch torchvision torchaudio
+pip install IPython
+pip install ultralytics
+pip install python-multipart
+

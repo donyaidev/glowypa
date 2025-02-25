@@ -1,0 +1,227 @@
+.setting__background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--theme-background-dialog);
+}
+
+.setting__background--frame {
+    position: relative;
+    border-radius: 20px;
+    width: 640px;
+    height: 610px;
+    background-color: var(--theme-background-white-dialog);
+    overflow: hidden;
+}
+
+.setting__header {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.setting__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 12.5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: red;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+.setting__close:hover {
+    background-color: rgb(255, 89, 89);
+}
+
+.setting__close:active {
+    transform: scale(0.98);
+}
+
+
+/* body */
+
+.setting__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+.setting__content--left {
+    width: 24%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    border-right: 1px solid var(--border);
+}
+
+.setting__content--avt {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--theme-background-orange);
+    overflow: hidden;
+    border: 1.5px solid var(--border);
+}
+
+.setting__content--avt:hover {
+    cursor: pointer;
+}
+
+.setting__content--avt .avatar{
+    width: 100%;
+    height: 100%;
+}
+
+.setting__content--avt .avatar img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.setting__content--right {
+    width: 86%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.grid__secure--item,
+.item__birth-day,
+.item__last-name,
+.item__first-name,
+.item__address,
+.item__skin-type {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.grid__secure--item input,
+.item__birth-day input,
+.item__last-name input,
+.item__first-name input,
+.item__address input {
+    width: 100%;
+    height: 35px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0 5px 0 5px;
+}
+
+.grid__secure--item label,
+.item__birth-day label,
+.item__last-name label,
+.item__first-name label,
+.item__address label,
+.item__skin-type label {
+    color: var(--them-grey-color);
+    font-weight: 300;
+}
+
+.item__skin-type select {
+    width: 100%;
+    height: 35px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0 5px 0 5px;
+}
+
+.item__last-name {
+    grid-area: last-name;
+}
+
+.tem__first-name {
+    grid-area: first-name;
+}
+
+.item__address {
+    grid-area: address;
+}
+
+.item__birth-day {
+    grid-area: birthday;
+}
+
+.item__skin-type {
+    grid-area: skin-type;
+}
+
+.item__btn {
+    grid-area: btn;
+}
+
+.form__grid {
+    display: grid;
+    ;
+    grid-template-areas:
+        'last-name first-name'
+        'birthday skin-type'
+        'address address'
+        'btn btn';
+    grid-gap: 10px;
+}
+
+.edit__information {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: right;
+    padding: 10px 0 10px 0;
+}
+
+.edit--btn {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--theme-background-orange);
+    color: white;
+    font-size: 14.09px;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.grid__secure {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.dont__fillin {
+    background-color: #f0f0f0;
+    /* Màu xám nhạt */
+    cursor: not-allowed;
+}
+
+
+.btn-edit {
+    background-color: green;
+    /* Màu xanh */
+    color: white;
+}
+
+.btn-save {
+    background-color: orange;
+    /* Màu cam */
+    color: white;
+}

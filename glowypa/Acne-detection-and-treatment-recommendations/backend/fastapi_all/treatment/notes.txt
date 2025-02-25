@@ -1,0 +1,47 @@
+# Go to elasticsearch directory
+cd ~/elasticsearch/elasticsearch-8.11.3
+
+# Start elasticsearch
+./bin/elasticsearch
+
+
+
+
+
+
+
+# Go to home directory
+cd ~
+
+# Create directory for Elasticsearch
+mkdir elasticsearch
+cd elasticsearch
+
+# Download (latest version 8.11.3)
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.11.3-linux-x86_64.tar.gz
+
+# Extract
+tar -xzf elasticsearch-8.11.3-linux-x86_64.tar.gz
+
+# Remove tar file (optional)
+rm elasticsearch-8.11.3-linux-x86_64.tar.gz
+
+# Go to config directory
+cd elasticsearch-8.11.3/config
+
+# Edit elasticsearch.yml
+nano elasticsearch.yml
+
+# Add/modify these settings:
+cluster.name: my-cluster
+node.name: node-1
+network.host: 0.0.0.0
+http.port: 9200
+discovery.type: single-node
+xpack.security.enabled: false
+
+# Go to elasticsearch directory
+cd ~/elasticsearch/elasticsearch-8.11.3
+
+# Start elasticsearch
+./bin/elasticsearch

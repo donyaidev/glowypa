@@ -1,0 +1,17 @@
+.loading__background--task{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--theme-background-dialog);
+    border: none;
+}
+
+.loading__backgound-task--img{
+    width: 150px;
+}

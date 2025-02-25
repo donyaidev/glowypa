@@ -1,0 +1,65 @@
+.yesNo__background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    background-color: var(--theme-background-dialog);
+    border: none;
+}
+
+.yesNo__dialog--frame{
+    width: 300px;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+
+.yesNo__dialog{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.yesNo__dialog--button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 90%;
+    height: 30px;
+    gap: 5px;
+}
+
+.yesNo__dialog--button button{
+    width: 100%;
+    height: 100%;
+    background-color: var(--theme-background-orange);
+    color: white;
+    border: none;
+    border-radius: 7px;
+}
+
+.yesNo__dialog--button button:hover{
+    background-color: var(--theme-background-orange-light);
+    cursor: pointer;
+}
+
+.yesNo__dialog--button button:active{
+    background-color: var(--theme-background-orange-deep);
+}

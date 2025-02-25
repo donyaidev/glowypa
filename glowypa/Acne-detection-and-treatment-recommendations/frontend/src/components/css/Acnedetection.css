@@ -1,0 +1,76 @@
+.acne__detection--split {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+    padding-right: 10px;
+}
+
+.acne__detection--tool {
+    display: flex;
+    flex-direction: row;
+    min-height: 113px;
+    width: 100%;
+}
+
+.acne__detection--result {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100% - 122px);
+    width: 100%;
+}
+
+.span__tag{
+    color: var(--theme-background-green);
+    font-weight: 300;
+    padding: 0 5px 5px 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

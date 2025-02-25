@@ -1,0 +1,385 @@
+.background__dialog{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding-top: calc(100vh - 90vh);
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--theme-background-dialog);
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+}
+
+.background__dialog--main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 40rem;
+    height: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+}
+
+.dialog__header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 3.5rem;
+    background-color: var(--theme-background-white-dialog);
+    border-bottom: 1px solid var(--border);
+    border-radius: 15px 15px 0 0;
+}
+
+.dialog__header--title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--theme-background-green);
+}
+.cls__btn{
+    position: absolute;
+    min-width: 1.7rem;
+    min-height: 1.7rem;
+    right: 2%;
+    border: none;
+    border-radius: 20px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cls__btn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.cls__btn:active{
+    transform: scale(1);
+}
+
+.dialog__body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 3.5rem);
+    background-color: var(--theme-background-white-dialog);
+    padding: 1rem;
+    gap: 1rem;
+    overflow-y: auto;
+    border-radius: 0 0 15px 15px;
+    scrollbar-width: none;
+}
+
+.dialog__body::-webkit-scrollbar {
+    width: 0px;
+}
+
+.dialog__body::-webkit-scrollbar-thumb {
+    background-color: var(--theme-background-green);
+    border-radius: 4px;
+    display: none; 
+}
+
+/* btn upload image */
+.list__img--diagnoises{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dialog__body--upload-img-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 2.5rem;
+    width: 200px;
+    background-color: var(--theme-background-tag);
+    border-radius: 5px;
+    color: var(--theme-background-green);
+    font-weight: 400;
+}
+
+.dialog__body--upload-img-btn:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    background-color: var(--theme-background-tag-deep);
+}
+
+.dialog__body--upload-img-btn:active {
+    transform: scale(1);
+}
+
+.webcam{
+    width: 110px;
+}
+
+.list__diagnoises--img{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+    height: 133px;
+    border: 1px solid var(--border);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+.img__diagnoises--rule--title{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 1rem;
+    padding: 10px 10px 10px 5px;
+    color: var(--theme-background-green);
+    font-weight: bold;
+}
+
+.cropper-container .cropper-view-box,
+.cropper-container .cropper-face {
+    border-radius: 10px; /* Rounds the image */
+}
+
+.cropper-container {
+    border-radius: 10px; /* Rounds the outer container */
+    min-height: 400px;
+    overflow: hidden; 
+  }
+  
+
+.crop-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    right: 0;
+    width: 130px;
+    min-height: 2.5rem;
+    border: none;
+    background-color: var(--theme-background-green);
+    border-radius: 5px;
+    color: white;
+    font-weight: 200;
+}
+
+.crop-btn:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.crop-btn:active{
+    transform: scale(1);
+}
+
+.icon--element-crop{
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+
+
+.dialog__body--upload-img-btn.disabled {
+    background-color: var(--them-scrollbar); /* Gray background for disabled state */
+  }
+  
+  .dialog__body--upload-img-btn.disabled p {
+    color: red; 
+    font-weight: 400;
+  }
+
+  .icon--element-locked{
+    width: 20px;
+    height: 20px;
+    color: red;
+  }
+
+  .icon--element-unlocked{
+    width: 20px;
+    height: 20px;
+    color: green;
+    font-weight: 500;
+  }
+
+.error-message{
+    font-size: 0.8rem;
+    color: red;
+}
+
+
+.dialog__body-func{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: left;
+    width: 100%;
+    gap: 10px;
+}
+
+.notification__empty{
+    color: var(--theme-color-red);
+}
+
+
+.save__img{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    min-height: 2.5rem;
+}
+
+.dialog__img-save{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 190px;
+    border-radius: 5px;
+    background-color: var(--theme-background-orange-light);
+    color: var(--theme-background-orange-deep);
+    gap: 5px;
+    height: 100%;
+}
+
+.dialog__img-save:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+    background-color: var(--theme-background-orange-light-deep);
+}
+
+.dialog__img-save:active{
+    transform: scale(1);
+}
+
+.icon--element-med{
+    width: 20px;
+    height: 20px;
+    color: var(--theme-background-orange-deep);
+}
+
+.img__diagnoises--recommend{
+}
+
+.img__diagnoises--rules--list{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+    width: 100%;
+    gap: 12px;
+    padding-top: 5px;
+}
+
+.img__diagnoises--rule{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    height: 112px;
+    background-color: var(--theme-background-tag);
+    border-radius: 8px;
+    padding: 0 0 0 5px;
+}
+
+.img__diagnoises--guild{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 112px;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.img_diagnoises--text{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: calc(100% - 122px);
+    border-radius:8px;
+    padding: 10px;
+}
+
+.img__diagnoises--icon{
+    width: 90px;
+}
+
+.webcam-flip {
+    transform: scaleX(-1);
+    border-radius: 10px;
+    border: 1px solid var(--green-light);
+  }
+
+.bouding__capture--btn{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-top: 10px;
+    gap: 10px;
+}
+.capture-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 130px;
+    min-height: 2.5rem;
+    border: none;
+    color: var(--theme-background-orange-deep);
+    border-radius: 5px;
+    background-color: var(--theme-background-orange-light);
+}
+
+.capture-btn:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+    background-color: var(--theme-background-orange-light-deep);
+}
+
+/* .capture_icon{
+    color: var(--theme-background-orange-deep) !important;
+} */
+
+
+.btn__func--crop{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: right;
+}
+
+.cancel-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    right: 0;
+    width: 130px;
+    min-height: 2.5rem;
+    border: none;
+    background-color: var( --theme-color-red);
+    border-radius: 5px;
+    color: white;
+    font-weight: 200;
+}
+
+.cancel-btn:hover{
+    transform: scale(1.02);
+}
+.cancel-btn:active{
+    transform: scale(1);
+}

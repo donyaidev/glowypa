@@ -1,0 +1,74 @@
+# version: '3.8'
+
+# services:
+#   frontend:
+#       build:
+#         context: ./frontend
+#       ports:
+#         - "3000:3000"
+#   embedding:
+#       build: 
+#         context: ./embedding
+#       ports:
+#         - "8888:8888"
+#   backend:
+#       build: 
+#         context: ./backend/fastapi_all
+#       ports:
+#         - "8000:8000"
+#   elasticdb:
+#     build: 
+#       context: ./elasticsearch/elasticsearch-8.11.3 
+#     ports:
+#       - "9200:9200"  
+#     environment:
+#       - discovery.type=single-node  
+#     volumes:
+#       - ./elasticsearch/elasticsearch-8.11.3/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml  # Gắn tệp cấu hình
+#       - ./elasticsearch/elasticsearch-8.11.3/data:/usr/share/elasticsearch/data  
+
+
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+
+  embedding:
+    build: 
+      context: ./embedding
+    ports:
+      - "8888:8888"
+
+  backend:
+    build: 
+      context: ./backend/fastapi_all
+    ports:
+      - "8000:8000"
+
+  elasticdb:
+    build: 
+      context: ./elasticsearch/elasticsearch-8.11.3 
+    ports:
+      - "9200:9200"  
+    environment:
+      - discovery.type=single-node  
+    volumes:
+      - ./elasticsearch/elasticsearch-8.11.3/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./elasticsearch/elasticsearch-8.11.3/data:/usr/share/elasticsearch/data  
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"  # HTTPS
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro  
+
+networks:
+  default:
+    driver: bridge

@@ -1,0 +1,18 @@
+.loading__background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loading__backgound--img{
+    width: 450px;
+    height: 450px;
+}

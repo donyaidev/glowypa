@@ -1,0 +1,90 @@
+.nav__left{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-grey);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 45px 45px 0;
+  padding-top: 10px
+}
+
+.nav__left--avatar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+}
+
+.nav__left--avatar .avatar{
+    display: flex;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: green;
+    overflow: hidden;
+}
+
+.nav__left--func{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav__left--head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+    padding-top: 10px;
+}
+
+.nav__left--bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+    padding-bottom: 30px;
+}
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    position: relative;
+}
+
+.icon--element{
+    width: 25px;
+    height: 25px;
+    color: var(--color-icon);
+}
+
+.icon--element:hover{
+    color: var(--green-light);
+    border: none;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+.icon-active{
+    color: var(--green-light);
+    background-color: var(--theme-background-green);
+    border-radius: 10px 10px 10px 10px;
+    .icon--element{
+        color: white;
+
+    }
+}

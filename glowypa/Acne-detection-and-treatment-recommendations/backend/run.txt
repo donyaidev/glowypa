@@ -1,0 +1,46 @@
+cd frontend 
+npm start
+
+cd backend/embedding/
+uvicorn main:app --reload --port 8888
+
+cd backend/fastapi_all/treatment/elasticsearch/elasticsearch-8.11.3/
+./bin/elasticsearch
+
+cd backend/fastapi_all/
+uvicorn main:app --reload
+
+sudo docker-compose up --build
+
+# Lọc log theo thời gian
+docker logs --since 2024-01-01T00:00:00Z container_name
+
+# Chỉ xem log error
+docker logs container_name 2>&1 | grep -i error
+
+# Lưu log ra file
+docker logs container_name > output.log
+
+
+
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+
+
+sudo ss -tuln
+sudo ufw enable
+sudo ufw status
+sudo ufw allow 9200/tcp
+sudo ufw allow 8888/tcp
+sudo ufw allow 8000/tcp
+sudo ufw allow 3000/tcp
+sudo netstat -tuln | grep -E '9200|8888|8000|3000'
+
+sudo ufw disable
+
+
+sudo chown -R 1000:1000 /home/thuongnn525/glowypa/Acne-detection-and-treatment-recommendations/elasticsearch/elasticsearch-8.11.3/data
+rm -f /home/thuongnn525/glowypa/Acne-detection-and-treatment-recommendations/elasticsearch/elasticsearch-8.11.3/data/node.lock
+
+sudo systemctl stop nginx

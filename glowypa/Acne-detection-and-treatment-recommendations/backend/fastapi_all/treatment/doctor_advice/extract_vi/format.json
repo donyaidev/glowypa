@@ -1,0 +1,25 @@
+{
+    "file_name": "",
+    "context": [
+        {
+            "page": 1,
+            "context": ""
+        },
+        {
+            "page": 2,
+            "context": ""
+        }
+        ...
+    ],
+    "image_page": [
+        {
+            "page": 1,
+            "imgbase64": ""
+        },
+        {
+            "page": 1,
+            "imgbase64": ""
+        }
+        ...
+    ]
+}

@@ -1,0 +1,398 @@
+.right-diagnosis{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    position: relative;
+}
+
+.chatbox{
+    width: calc(100% - 920px);
+    height: 98%;
+    border-radius: 20px;
+    background-color: white;
+    border: 0.5px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.chatbox__send{
+    width: 100%;
+    height: 168px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 0.5px solid var(--border);
+    position: relative;
+}
+
+
+/* .chatbox__rcm-products {
+    position: absolute;
+    background-color: rgb(0, 160, 93);
+    width: 41px;
+    height: 40px;
+    top: -60px;
+    z-index: 99;
+    right: -14px;
+    border-radius: 15px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-left: 4px;
+}
+
+.chatbox__rcm-products::before {
+    content: "RC ->";
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+
+.chatbox__rcm-products:hover {
+    width: 250px;
+    opacity: 1;
+}
+
+.chatbox__rcm-products:hover::before {
+    content: "Recommend Skincare";
+} */
+
+
+.chatbox__rcm-products {
+    position: absolute;
+    background-color: #00790C;
+    width: 41px;
+    height: calc(100% - 55px);
+    z-index: 99;
+    right: 0;
+    /* border-radius: 8px; */
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-left: 4px;
+    /* gap: 10px */
+}
+
+.chatbox__rcm-products::before {
+    content: "RCM";
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    left: 6px;
+}
+
+.chatbox__rcm-products .rcm-textarea {
+    display: none;
+    width: 0;
+    height: 90% !important;
+    padding: 10px;
+    border-radius: 15px 5px 5px 15px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    resize: none;
+    overflow: auto;
+    outline: none;
+    width: 120% !important;
+}
+
+
+
+.chatbox__rcm-products .rcm-btn {
+    display: none;
+    width: 0;
+    height: fit-content;
+    padding: 4px;
+    border-radius: 8px;
+    border: none;
+    color: rgb(0, 160, 93);
+    transition: all 0.3s ease;
+    width: fit-content;
+    border: none;
+
+}
+
+
+.chatbox__rcm-products:hover {
+    width: 100%;
+    opacity: 1;
+    padding: 0 15px;
+}
+
+.chatbox__rcm-products:hover::before {
+    content: "";
+}
+
+.chatbox__rcm-products:hover .rcm-textarea {
+    display: block;
+    width: 100%;
+}
+
+.chatbox__rcm-products .rcm-textarea::placeholder {
+    color: rgba(161, 161, 161, 0.7);
+}
+
+
+.chatbox__rcm-products:hover .rcm-btn {
+    display: block;
+    width: fit-content;
+    background-color: white;
+}
+
+.chatbox__rcm-products .rcm-btn::placeholder {
+    color: rgba(161, 161, 161, 0.7);
+}
+
+.rcm-btn:hover{
+
+}
+
+
+.chatbox__rcm-products .rcm-textarea::-webkit-scrollbar  {
+    width: 0px;
+}
+/* .chatbox__rcm-products .rcm-textarea::-webkit-scrollbar-thumb {
+    background-color: var(--theme-background-green);
+    border-radius: 4px;
+} */
+.chatbox__send--input{
+    width: 100%;
+    height: calc(100% - 35px);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px 10px 10px;
+    overflow: auto;
+}
+
+.chatbox__send--text-input::-webkit-scrollbar  {
+    width: 3px;
+}
+
+.chatbox__send--text-input::-webkit-scrollbar-thumb {
+    background-color: var(--theme-background-green);
+    border-radius: 4px;
+}
+
+.chatbox__send--text-input{
+    border: none;
+    resize: none;
+    height: 100%;
+    overflow: auto;
+    padding-right: 40px;
+    background-color: transparent;
+    outline: none;
+}
+
+.chatbox__send--func{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    border-top: 0.5px solid var(--border);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatbox__send--advance{
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 60px);
+    height: 100%;
+    /* padding-left: 10px; */
+    gap: 15px;
+    overflow: hidden;
+}
+
+.chatbox__send--advance-position{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100%;
+    width: fit-content;
+    font-size: 13px;
+    gap: 3px;
+    color: var(--color-icon);
+}
+
+.button-on-off {
+    position: relative;
+    height: 18px;
+    min-height: 18px;
+    width: 30px;
+    min-width: 30px;
+    background-color: var(--theme-off-button);
+    border-radius:10px;
+    display: flex; /* Use flexbox */
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+.circle-on-off {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    left: 1px;
+}
+
+#on {
+    background-color: var(--green-light);
+}
+
+#on-circle {
+    left: 12.5px;
+}
+
+.acne-detection{
+    width: 890px;
+    height: 98%;
+}
+
+/* Message */
+
+.chatbox__send--button{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+
+.chatbox__send--button .icon--element{
+    width: 20px;
+    height: 20px;
+    color: var(--geen-deep);
+}
+
+.icon-advance{
+    width: 20px;
+    height: 20px;
+    color: #00790C;
+}
+
+.chatbox__send--button .icon--element:hover{
+    color: var(--green-light);
+}
+
+.button-close-open-chat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 98%;
+}
+
+.chat-close__btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 20px;
+    height: 30px;
+    background-color: var(--theme-background-green);
+    border-radius: 10rem 0 0 10rem;
+}
+
+.chat-open__btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 20px;
+    height: 30px;
+    background-color: var(--theme-background-green);
+    border-radius: 0 20rem 20rem 0;
+}
+
+.button-close-open-chat__close{
+    position: absolute;
+    left: 0;
+}
+
+.button-close-open-chat button{
+    border: none;
+    cursor: pointer;
+}
+
+
+.display-hidden{
+    display: none;
+}
+
+
+
+.icon--element-arrow{
+    width: 20px;
+    height: 20px;
+    color: var(--color-icon-green);
+}
+
+@media (max-width: 1000px) {
+    .chatbox {
+        display: none;
+    }
+    .button-close-open-chat{
+        display: none;
+    }
+    
+}
+
+
+
+
+
+/* save btn */
+.save__treatment-routine{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    border: none;
+}
+
+.save__treatment-btn{
+    border: none;
+    background-color: #00790C;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.favourit__btn{
+    height: 100%;
+    padding: 4px 8px 4px 20px;
+    border-radius: 0 0 0 8px;
+    border: none;
+    background-color: #00790C;
+    color: white;
+    font-size: 13px;
+}
+
+.favourit__btn:hover, .save__treatment-btn:hover{
+    background-color: #01700c;
+}
+
+.favourit__btn:active, .save__treatment-btn:active{
+    background-color: #00790C;
+}

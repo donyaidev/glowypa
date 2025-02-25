@@ -9,9 +9,6 @@ from huggingface_hub import login
 from fastapi.middleware.cors import CORSMiddleware
 from huggingface_hub import hf_hub_download
 
-
-login(token="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")
-
 torch.cuda.empty_cache()
 # Initialize FastAPI app
 app = FastAPI(title="Embedding API")

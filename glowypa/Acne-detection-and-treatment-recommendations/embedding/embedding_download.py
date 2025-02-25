@@ -4,7 +4,6 @@ import os
 
 def download_model():
     # Login to Hugging Face
-    login(token="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")
     print("Login successful")
 
     # Create model cache directory if it doesn't exist
